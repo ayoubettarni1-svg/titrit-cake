@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titrit Cake | More than Cake… It’s a Feeling</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Titrit Cake | More than Cake... It's a Feeling - فن تصميم الحلويات الفاخرة</title>
+    <!-- روابط الخطوط الراقية -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --burgundy: #4B0F0F;
@@ -16,29 +17,29 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: var(--cream); color: var(--dark-choco); font-family: 'Montserrat', sans-serif; line-height: 1.7; }
+        body { background-color: var(--cream); color: var(--dark-choco); font-family: 'Tajawal', sans-serif; line-height: 1.8; }
 
-        /* Header */
+        /* شريط التنقل العلوي */
         header { background: var(--burgundy); padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--gold); position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
-        .logo-area { display: flex; align-items: center; gap: 15px; }
-        .logo-text { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--gold); letter-spacing: 2px; font-weight: 700; }
-        .sub-logo-text { font-size: 11px; color: var(--cream); opacity: 0.8; letter-spacing: 1px; }
+        .logo-area { display: flex; flex-direction: column; }
+        .logo-text { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--gold); letter-spacing: 2px; font-weight: 700; }
+        .sub-logo-text { font-size: 12px; color: var(--cream); opacity: 0.85; letter-spacing: 1px; font-family: 'Tajawal', sans-serif; }
 
-        .btn-gold { background-color: var(--gold); color: var(--burgundy); padding: 10px 25px; border-radius: 30px; font-weight: 600; font-size: 14px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(212, 184, 149, 0.3); }
+        .btn-gold { background-color: var(--gold); color: var(--burgundy); padding: 12px 28px; border-radius: 30px; font-weight: 600; font-size: 14px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(212, 184, 149, 0.3); display: inline-block; }
         .btn-gold:hover { background-color: var(--white); transform: translateY(-2px); }
 
-        /* Hero Section */
-        .hero { background: linear-gradient(rgba(31, 15, 13, 0.65), rgba(75, 15, 15, 0.75)), url('https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=1400&q=80') center/cover; color: var(--white); text-align: center; padding: 130px 20px; }
-        .hero h2-script { font-family: 'Great Vibes', cursive; font-size: 45px; color: var(--gold); margin-bottom: 10px; }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: 48px; margin-bottom: 20px; font-weight: 700; letter-spacing: 1px; }
+        /* القسم الرئيسي (Hero Section) */
+        .hero { background: linear-gradient(rgba(31, 15, 13, 0.65), rgba(75, 15, 15, 0.75)), url('https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=1400&q=80') center/cover; color: var(--white); text-align: center; padding: 140px 20px; }
+        .hero-script { font-family: 'Great Vibes', cursive; font-size: 48px; color: var(--gold); margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 44px; margin-bottom: 20px; font-weight: 700; letter-spacing: 1px; }
         .hero p { font-size: 18px; margin-bottom: 35px; max-width: 700px; margin-left: auto; margin-right: auto; font-weight: 300; color: var(--cream); }
 
-        /* Container */
+        /* حاوية المحتوى العامة */
         .container { max-width: 1150px; margin: 60px auto; padding: 0 25px; }
         .section-title { text-align: center; font-family: 'Playfair Display', serif; font-size: 36px; margin-bottom: 10px; color: var(--burgundy); font-weight: 700; }
-        .section-subtitle { text-align: center; font-family: 'Great Vibes', cursive; font-size: 30px; color: var(--warm-brown); margin-bottom: 50px; }
+        .section-subtitle { text-align: center; font-family: 'Great Vibes', cursive; font-size: 32px; color: var(--warm-brown); margin-bottom: 50px; }
 
-        /* About Section */
+        /* قسم من نحن (About Section) */
         .about-section { background: var(--white); padding: 60px; border-radius: 20px; box-shadow: 0 10px 30px rgba(75, 15, 15, 0.05); display: flex; flex-wrap: wrap; align-items: center; gap: 50px; border: 1px solid rgba(212, 184, 149, 0.2); }
         .about-text { flex: 1; min-width: 300px; }
         .about-text h2 { font-family: 'Playfair Display', serif; color: var(--burgundy); margin-bottom: 20px; font-size: 30px; }
@@ -46,7 +47,16 @@
         .about-img { flex: 1; min-width: 300px; text-align: center; }
         .about-img img { width: 100%; max-width: 450px; border-radius: 15px; object-fit: cover; height: 320px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
 
-        /* Services Grid */
+        /* معرض الأعمال الفاخر (Gallery Section) مع الصور الحقيقية */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 60px; }
+        .gallery-item { background: var(--white); border-radius: 15px; overflow: hidden; box-shadow: 0 8px 20px rgba(75, 15, 15, 0.06); transition: transform 0.4s ease; border: 1px solid rgba(212, 184, 149, 0.2); }
+        .gallery-item:hover { transform: translateY(-8px); }
+        .gallery-item img { width: 100%; height: 320px; object-fit: cover; }
+        .gallery-info { padding: 20px; text-align: center; }
+        .gallery-info h3 { font-family: 'Playfair Display', serif; color: var(--burgundy); font-size: 18px; margin-bottom: 8px; }
+        .gallery-info p { color: #666; font-size: 13px; }
+
+        /* شبكة الخدمات والتخصصات */
         .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 30px; }
         .card { background: var(--white); border-radius: 15px; overflow: hidden; box-shadow: 0 10px 25px rgba(75, 15, 15, 0.06); text-align: center; padding-bottom: 25px; transition: transform 0.4s ease; border: 1px solid rgba(212, 184, 149, 0.2); }
         .card:hover { transform: translateY(-8px); }
@@ -54,158 +64,215 @@
         .card h3 { font-family: 'Playfair Display', serif; margin: 20px 0 10px; color: var(--burgundy); font-size: 22px; }
         .card p { padding: 0 20px; color: #666; font-size: 14px; margin-bottom: 20px; }
 
-        /* Testimonials */
+        /* آراء الزبائن (Testimonials) */
         .testimonials { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 25px; margin-bottom: 60px; }
-        .testimonial-card { background: var(--white); padding: 30px; border-radius: 15px; box-shadow: 0 8px 25px rgba(75, 15, 15, 0.04); border-left: 4px solid var(--gold); position: relative; }
+        .testimonial-card { background: var(--white); padding: 30px; border-radius: 15px; box-shadow: 0 8px 25px rgba(75, 15, 15, 0.04); border-right: 4px solid var(--gold); position: relative; }
         .testimonial-card p { color: #555; font-style: italic; margin-bottom: 20px; font-size: 14px; }
         .testimonial-card h4 { color: var(--burgundy); font-size: 15px; font-family: 'Playfair Display', serif; }
         .stars { color: #d4a373; margin-bottom: 12px; letter-spacing: 3px; }
 
-        /* Booking Form */
+        /* نموذج الحجز والتواصل (Booking Form) */
         .booking-form { background: var(--white); padding: 50px; border-radius: 20px; box-shadow: 0 15px 35px rgba(75, 15, 15, 0.06); max-width: 750px; margin: 0 auto; border: 1px solid rgba(212, 184, 149, 0.3); }
         .form-group { margin-bottom: 22px; }
         .form-group label { display: block; margin-bottom: 8px; color: var(--burgundy); font-weight: 600; font-size: 14px; letter-spacing: 0.5px; }
-        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 14px; border: 1px solid #e0d0c0; border-radius: 10px; font-size: 14px; outline: none; background-color: #fcf9f6; transition: border-color 0.3s; color: var(--dark-choco); }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 14px; border: 1px solid #e0d0c0; border-radius: 10px; font-size: 14px; outline: none; background-color: #fcf9f6; transition: border-color 0.3s; color: var(--dark-choco); font-family: 'Tajawal', sans-serif; }
         .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--gold); box-shadow: 0 0 8px rgba(212, 184, 149, 0.2); }
         .form-group textarea { resize: vertical; height: 130px; }
 
-        /* WhatsApp Floating Button */
-        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 32px; box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4); z-index: 1000; transition: transform 0.3s ease; text-decoration: none; }
+        /* زر الواتساب العائم */
+        .whatsapp-float { position: fixed; bottom: 30px; left: 30px; background-color: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 32px; box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4); z-index: 1000; transition: transform 0.3s ease; text-decoration: none; }
         .whatsapp-float:hover { transform: scale(1.1); }
 
-        /* Footer */
+        /* تذييل الصفحة (Footer) */
         footer { background: var(--dark-choco); color: var(--cream); text-align: center; padding: 35px 20px; margin-top: 80px; border-top: 2px solid var(--gold); }
         footer p { font-size: 14px; letter-spacing: 1px; }
 
         @media (max-width: 768px) {
             header { padding: 15px 20px; flex-direction: column; gap: 15px; text-align: center; }
-            .hero h1 { font-size: 34px; }
+            .hero h1 { font-size: 32px; }
             .about-section { padding: 30px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Bouton WhatsApp Flottant -->
-    <a href="https://wa.me/212617598717?text=Bonjour,%20je%20souhaite%20commander%20une%20création%20sur%20mesure%20chez%20Titrit%20Cake" target="_blank" class="whatsapp-float" title="Contactez-nous sur WhatsApp">
+    <!-- زر التواصل عبر الواتساب العائم -->
+    <a href="https://wa.me/212617598717?text=Bonjour,%20je%20souhaite%20commander%20une%20création%20sur%20mesure%20chez%20Titrit%20Cake" target="_blank" class="whatsapp-float" title="تواصل معنا عبر الواتساب">
         💬
     </a>
 
-    <!-- En-tête -->
+    <!-- رأس الصفحة (Header) -->
     <header>
         <div class="logo-area">
-            <div>
-                <div class="logo-text">TITRIT CAKE</div>
-                <div class="sub-logo-text">Rabat, Morocco[cite: 1]</div>
-            </div>
+            <div class="logo-text">TITRIT CAKE</div>
+            <div class="sub-logo-text">Salé, Morocco</div>
         </div>
         <a href="https://www.instagram.com/titritcake/" target="_blank" class="btn-gold">Instagram @titritcake</a>
     </header>
 
-    <!-- Section Héroïque -->
+    <!-- القسم الرئيسي (Hero Section) -->
     <section class="hero">
-        <div style="font-family: 'Great Vibes', cursive; font-size: 42px; color: var(--gold); margin-bottom: 5px;">More than Cake… It’s a Feeling[cite: 1]</div>
-        <h1>L'Art de la Pâtisserie Fine & Sur Mesure ✨</h1>
-        <p>Des créations artisanales d'exception inspirées par le raffinement et l'élégance pour sublimer vos plus beaux moments à Rabat[cite: 1].</p>
-        <a href="#booking" class="btn-gold" style="padding: 14px 35px; font-size: 16px;">Réserver Votre Expérience</a>
+        <div class="hero-script">More than Cake... It's a Feeling[cite: 1]</div>
+        <h1>فن تصميم الحلويات الفاخرة وحسب الطلب ✨</h1>
+        <p>نحوّل لحظاتكم السعيدة إلى تحف فنية استثنائية تجمع بين روعة المذاق الراقي والأناقة البصرية في مدينة سلا.</p>
+        <a href="#booking" class="btn-gold" style="padding: 14px 35px; font-size: 16px;">احجز تجربتك الآن</a>
     </section>
 
     <div class="container">
         
-        <!-- Section "À Propos / Notre Essence" -->
+        <!-- قسم من نحن (About Section) -->
         <div class="about-section">
             <div class="about-text">
-                <h2>L'Esprit Titrit Cake</h2>
-                <p>Chez <strong>Titrit Cake</strong>, chaque pièce est façonnée avec passion, élégance et une touche féminine unique. Nous transformons vos émotions en œuvres d'art gustatives haut de gamme.</p>
-                <p>Implantés à Rabat[cite: 1], nous sélectionnons rigoureusement des ingrédients nobles et frais pour vous garantir une expérience sensorielle inoubliable, où le luxe rencontre la gourmandise absolue.</p>
+                <h2>L'Esprit Titrit Cake - فلسفتنا</h2>
+                <p>في <strong>Titrit Cake</strong>، نؤمن بأن كل مناسبة مميزة تستحق قطعة حلويات تروي قصة فريدة. نحن متخصصون في فن المعجنات الراقية (Pâtisserie fine) مع لمسة أنثوية ساحرة وعناية فائقة بأدق التفاصيل.</p>
+                <p>نحرص في مقرنا بمدينة سلا على استخدام أجود المكونات الطبيعية الفاخرة لضمان توازن مثالي بين النكهة المترفة والمظهر الراقي الذي يليق باحتفالاتكم.</p>
             </div>
             <div class="about-img">
-                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" alt="Pâtisserie fine Titrit Cake">
+                <img src="image.png" alt="إبداعات Titrit Cake الفاخرة">
             </div>
         </div>
 
-        <!-- Section "Spécialités" -->
+        <!-- معرض أعمالنا الحقيقية (Gallery Section) -->
+        <h2 class="section-title" style="margin-top: 70px;">Notre Galerie de Créations</h2>
+        <div class="section-subtitle">لمسـات إبداعية تحكي قصصكم السعيدة</div>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="image.png" alt="كيكة عيد ميلاد أنثوية أحلام">
+                <div class="gallery-info">
+                    <h3>Design Féminin & Papillons</h3>
+                    <p>كيكة عيد ميلاد أنيقة مزينة بالورود والفراشات حسب الطلب</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="image_2.png" alt="كيكة سبايدرمان">
+                <h3>Thème Super-Héros (Spider-Man)</h3>
+                <p>تصميم مخصص وممتع لإسعاد أعياد ميلاد الأطفال</p>
+            </div>
+            <div class="gallery-item">
+                <img src="image_3.png" alt="كيكة نادي برشلونة وميسي">
+                <h3>Passion Foot & Barça</h3>
+                <p>كيكة مخصصة لعشاق نادي برشلونة والنجم ميسي بتفاصيل مبهرة</p>
+            </div>
+            <div class="gallery-item">
+                <img src="image_4.png" alt="كيكة باتمان">
+                <h3>Thème Batman</h3>
+                <p>إبداع خاص لعشاق الأبطال الخارقين مع لمسة فاخرة</p>
+            </div>
+            <div class="gallery-item">
+                <img src="image_5.png" alt="جلسة بيكنيك وحفلات">
+                <h3>Moments de Fête & Pique-nique</h3>
+                <p>تجهيزات وحلويات متكاملة لطاولات الاستقبال والاحتفالات الميدانية</p>
+            </div>
+            <div class="gallery-item">
+                <img src="image_6.png" alt="كيكة التاج الملكي أمنية">
+                <h3>Couronne Royale (Umnia)</h3>
+                <p>فخامة اللمسات الملكية والذهبية للمناسبات الخاصة جداً</p>
+            </div>
+            <div class="gallery-item">
+                <img src="image_7.png" alt="كيكة باللون الوردي والتاج">
+                <h3>Élégance Rose & Couronne</h3>
+                <p>تصميم رقيق وساحر بألوان أنثوية مفعمة بالحياة</p>
+            </div>
+            <div class="gallery-item">
+                <img src="image_8.png" alt="كيكة الورود الحمراء الفاخرة">
+                <h3>Roses d'Exception</h3>
+                <p>تنسيق فاخر للورود الحمراء لمناسبات الحب والخطوبة</p>
+            </div>
+            <div class="gallery-item">
+                <img src="image_9.png" alt="كيكة التخرج Bac en poche">
+                <h3>Célébration de Réussite (Bac)</h3>
+                <p>تهاني النجاح والتميز بأرقى تصاميم الحلويات الاحتفالية</p>
+            </div>
+            <div class="gallery-item">
+                <img src="image_10.png" alt="كيكة المناسبات الخاصة">
+                <h3>Moments Précieux</h3>
+                <p>تعبير عن المشاعر الدافئة في أبسط وأرقى التفاصيل</p>
+            </div>
+        </div>
+
+        <!-- تخصصاتنا وحلوياتنا -->
         <h2 class="section-title" style="margin-top: 70px;">Nos Collections Exclusives</h2>
-        <div class="section-subtitle">Gâteaux d’exception & douceurs raffinées</div>
+        <div class="section-subtitle">إبداعات مصممة خصيصاً لأجلكم</div>
         
         <div class="services">
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=600&q=80" alt="Gâteaux Personnalisés">
+                <img src="image.png" alt="Gâteaux Personnalisés">
                 <h3>Gâteaux Personnalisés</h3>
-                <p>Des designs somptueux sur mesure, pensés dans les moindres détails pour vos anniversaires et célébrations.</p>
+                <p>كيكات أعياد الميلاد والمناسبات الخاصة بتصاميم مخصصة ومبتكرة تخطف الأنظار وترضي كافة الأذواق.</p>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80" alt="Desserts Gourmands">
+                <img src="image_5.png" alt="Desserts Gourmands">
                 <h3>Desserts & Cupcakes</h3>
-                <p>Une sélection délicate de douceurs et mignardises pour embellir vos tables d'accueil et régaler vos convives.</p>
+                <p>تشكيلة فاخرة من الكب كيك والحلويات الفردية التي تضفي جمالية وأناقة على طاولات الاستقبال.</p>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=600&q=80" alt="Événements & Mariages">
+                <img src="image_8.png" alt="Événements & Mariages">
                 <h3>Événements & Mariages</h3>
-                <p>Une mise en scène prestigieuse et des pièces montées féeriques pour marquer à jamais les instants magiques de votre vie.</p>
+                <p>فخامة وأناقة تليق بأهم أيام حياتك، قطع متكاملة ومترفة لحفلات الزفاف والخطوبة والاستقبالات الكبرى.</p>
             </div>
         </div>
 
-        <!-- Section "Témoignages" -->
+        <!-- آراء الزبائن (Testimonials) -->
         <h2 class="section-title" style="margin-top: 80px;">Témoignages</h2>
-        <div class="section-subtitle">Ce que disent nos précieux clients</div>
+        <div class="section-subtitle">كلمات نعتز بها من عملائنا الأفاضل</div>
         
         <div class="testimonials">
             <div class="testimonial-card">
                 <div class="stars">★★★★★</div>
-                <p>"Une véritable merveille visuelle et gustative ! Le gâteau de mariage a dépassé toutes nos attentes. Une finesse et une élégance incomparables."</p>
-                <h4>— Yasmine M., Rabat</h4>
+                <p>"Une véritable œuvre d'art ! الكيكة كانت تحفة فنية بكل ما تحمله الكلمة من معنى، الشكل راقي جداً والمذاق لا يُنسى. شكراً Titrit Cake على الاحترافية."</p>
+                <h4>— فاطمة الزهراء م.</h4>
             </div>
             <div class="testimonial-card">
                 <div class="stars">★★★★★</div>
-                <p>"Plus qu'un simple gâteau, c'est une émotion pure. Le souci du détail et la touche artistique féminine font toute la différence chez Titrit Cake."</p>
-                <h4>— Salma K.</h4>
+                <p>"Plus qu'un gâteau, c'est une émotion. التفاصيل الدقيقة واللمسة الأنيقة أضافت سحراً خاصاً لحفلنا. أنصح بالتعامل معهم دون تردد!"</p>
+                <h4>— ياسمين ك.</h4>
             </div>
             <div class="testimonial-card">
                 <div class="stars">★★★★★</div>
-                <p>"Service irréprochable du début à la fin. Les saveurs sont riches, équilibrées et d'une grande fraîcheur. Merci pour ce moment magique."</p>
-                <h4>— Mehdi B.</h4>
+                <p>"Service irréprochable et saveurs exquises. خدمة عملاء راقية جداً والتوصيل كان في الموعد المحدد تماماً. بالتأكيد ليس آخر تعامل."</p>
+                <h4>— مهدي ب.</h4>
             </div>
         </div>
 
-        <!-- Section "Formulaire de Réservation" -->
+        <!-- نموذج الحجز والطلب (Booking Form) -->
         <div id="booking" class="booking-form">
-            <h2 class="section-title" style="margin-bottom: 5px;">Réservation & Commandes</h2>
-            <p style="text-align: center; color: #777; margin-bottom: 30px; font-size: 14px;">Laissez-nous vos coordonnées et partagez votre vision, nous concrétiserons vos rêves sucrés.</p>
+            <h2 class="section-title" style="margin-bottom: 5px;">Réservation & Commande</h2>
+            <p style="text-align: center; color: #777; margin-bottom: 30px; font-size: 14px;">املأ النموذج أدناه لنقوم بمناقشة تفاصيل كيكة أحلامك وتأكيد حجزك بكل سهولة</p>
             
             <form>
                 <div class="form-group">
-                    <label for="name">Nom Complet</label>
-                    <input type="text" id="name" placeholder="Votre nom et prénom" required>
+                    <label for="name">الاسم الكامل / Nom Complet</label>
+                    <input type="text" id="name" placeholder="أدخل اسمك الكريم" required>
                 </div>
                 <div class="form-group">
-                    <label for="phone">Numéro de Téléphone (WhatsApp)</label>
+                    <label for="phone">رقم الهاتف (واتساب) / Téléphone WhatsApp</label>
                     <input type="tel" id="phone" placeholder="Ex: +212 6..." required>
                 </div>
                 <div class="form-group">
-                    <label for="occasion">Type d'Événement</label>
+                    <label for="occasion">نوع المناسبة / Type d'Événement</label>
                     <select id="occasion">
-                        <option value="wedding">Mariage & Fiançailles</option>
-                        <option value="birthday">Anniversaire</option>
-                        <option value="reception">Réception / Événement Privé</option>
-                        <option value="other">Autre Gourmandise</option>
+                        <option value="birthday">عيد ميلاد / Anniversaire</option>
+                        <option value="wedding">زفاف أو خطوبة / Mariage & Fiançailles</option>
+                        <option value="reception">حفلة استقبال أو تخرج / Réception</option>
+                        <option value="other">أخرى / Autre</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="details">Vos envies & détails (Parfums, design, date souhaitée...)</label>
-                    <textarea id="details" placeholder="Décrivez-nous votre projet de rêve..."></textarea>
+                    <label for="details">تفاصيل الطلب (النكهة، التصميم، التاريخ...) / Détails</label>
+                    <textarea id="details" placeholder="اخبرنا عن أفكارك، النكهات المفضلة، أو أرفق وصفاً لتصميمك المفضل..."></textarea>
                 </div>
                 <div style="text-align: center; margin-top: 30px;">
-                    <button type="submit" class="btn-gold" style="width: 100%; padding: 14px; font-size: 16px; border: none; cursor: pointer;">Envoyer la Demande</button>
+                    <button type="submit" class="btn-gold" style="width: 100%; padding: 14px; font-size: 16px; border: none; cursor: pointer;">إرسال الطلب / Envoyer</button>
                 </div>
             </form>
         </div>
 
     </div>
 
-    <!-- Pied de page -->
+    <!-- التذييل (Footer) -->
     <footer>
-        <p>&copy; 2026 Titrit Cake • More than Cake… It’s a Feeling[cite: 1]. Tous droits réservés.</p>
+        <p>&copy; 2026 Titrit Cake. More than Cake... It's a Feeling[cite: 1]. Tous droits réservés.</p>
     </footer>
 
 </body>
