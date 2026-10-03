@@ -1,307 +1,83 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titrit Cake | More than Cake... It's a Feeling</title>
-    <!-- خطوط عالمية فاخرة -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --burgundy: #4B0F0F;
-            --warm-brown: #8B3A2E;
-            --gold: #D4B895;
-            --cream: #F7E8DA;
-            --dark-choco: #1F0F0D;
-            --white: #FFFFFF;
-            --card-bg: rgba(255, 255, 255, 0.95);
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: var(--cream); color: var(--dark-choco); font-family: 'Tajawal', sans-serif; line-height: 1.8; overflow-x: hidden; }
-
-        /* شريط التنقل العلوي العصري */
-        header { 
-            background: rgba(75, 15, 15, 0.95); 
-            backdrop-filter: blur(10px);
-            padding: 15px 50px; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            border-bottom: 1px solid rgba(212, 184, 149, 0.3); 
-            position: fixed; 
-            top: 0; 
-            width: 100%; 
-            z-index: 1000; 
-            box-shadow: 0 4px 30px rgba(0,0,0,0.1); 
-        }
-        .logo-area { display: flex; flex-direction: column; }
-        .logo-text { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--gold); letter-spacing: 3px; font-weight: 700; }
-        .sub-logo-text { font-size: 11px; color: var(--cream); opacity: 0.8; letter-spacing: 2px; text-transform: uppercase; }
-
-        .btn-gold { 
-            background: linear-gradient(135deg, var(--gold), #c4a47c); 
-            color: var(--burgundy); 
-            padding: 10px 24px; 
-            border-radius: 50px; 
-            font-weight: 700; 
-            font-size: 13px; 
-            text-decoration: none; 
-            transition: all 0.4s ease; 
-            box-shadow: 0 4px 15px rgba(212, 184, 149, 0.2); 
-            border: 1px solid rgba(255,255,255,0.2);
-        }
-        .btn-gold:hover { background: var(--white); transform: translateY(-3px); box-shadow: 0 6px 20px rgba(212, 184, 149, 0.4); }
-
-        /* القسم الرئيسي الفاخر (Hero) */
-        .hero { 
-            background: linear-gradient(rgba(31, 15, 13, 0.85), rgba(75, 15, 15, 0.9)), url('image_18.png') center/cover fixed; 
-            color: var(--white); 
-            text-align: center; 
-            padding: 180px 20px 120px; 
-            border-bottom: 4px solid var(--gold); 
-            position: relative;
-        }
-        .hero-script { font-family: 'Great Vibes', cursive; font-size: 55px; color: var(--gold); margin-bottom: 15px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: 46px; margin-bottom: 20px; font-weight: 700; letter-spacing: 1px; }
-        .hero p { font-size: 18px; margin-bottom: 40px; max-width: 650px; margin-left: auto; margin-right: auto; font-weight: 300; color: var(--cream); opacity: 0.9; }
-
-        /* الهيكل العام */
-        .container { max-width: 1200px; margin: 80px auto; padding: 0 30px; }
-        .section-title { text-align: center; font-family: 'Playfair Display', serif; font-size: 38px; margin-bottom: 8px; color: var(--burgundy); font-weight: 700; }
-        .section-subtitle { text-align: center; font-family: 'Great Vibes', cursive; font-size: 34px; color: var(--warm-brown); margin-bottom: 60px; }
-
-        /* قسم من نحن بأسلوب عصري */
-        .about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: center; background: var(--white); padding: 50px; border-radius: 24px; box-shadow: 0 15px 40px rgba(75, 15, 15, 0.04); border: 1px solid rgba(212, 184, 149, 0.2); }
-        .about-content h2 { font-family: 'Playfair Display', serif; color: var(--burgundy); font-size: 32px; margin-bottom: 20px; }
-        .about-content p { color: #555; margin-bottom: 15px; font-size: 16px; }
-        .about-image img { width: 100%; border-radius: 16px; height: 380px; object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-
-        /* معرض الأعمال العصري (Modern Minimalist Gallery) */
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .gallery-card { background: var(--white); border-radius: 18px; overflow: hidden; box-shadow: 0 10px 30px rgba(75, 15, 15, 0.05); transition: all 0.4s ease; border: 1px solid rgba(212, 184, 149, 0.2); text-align: right; display: flex; flex-direction: column; }
-        .gallery-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(75, 15, 15, 0.1); }
-        .gallery-img-container { position: relative; overflow: hidden; height: 340px; }
-        .gallery-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
-        .gallery-card:hover img { transform: scale(1.05); }
-        .gallery-details { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
-        .gallery-details h3 { font-family: 'Playfair Display', serif; color: var(--burgundy); font-size: 20px; margin-bottom: 10px; }
-        .gallery-details p { color: #666; font-size: 14px; }
-
-        /* قسم نموذج الحجز الفاخر */
-        .booking-section { background: var(--white); padding: 60px; border-radius: 24px; box-shadow: 0 20px 50px rgba(75, 15, 15, 0.06); max-width: 800px; margin: 0 auto; border: 1px solid rgba(212, 184, 149, 0.3); text-align: right; }
-        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .form-group { margin-bottom: 22px; }
-        .form-group.full { grid-column: span 2; }
-        .form-group label { display: block; margin-bottom: 8px; color: var(--burgundy); font-weight: 600; font-size: 14px; }
-        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 14px 18px; border: 1.5px solid #e8d8cc; border-radius: 12px; font-size: 14px; outline: none; background-color: #faf6f0; transition: all 0.3s; color: var(--dark-choco); font-family: 'Tajawal', sans-serif; direction: rtl; }
-        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--gold); background-color: var(--white); box-shadow: 0 0 10px rgba(212, 184, 149, 0.2); }
-        .form-group textarea { resize: vertical; height: 140px; }
-
-        /* زر الواتساب العائم */
-        .whatsapp-float { position: fixed; bottom: 35px; left: 35px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 32px; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4); z-index: 1000; transition: transform 0.3s ease; text-decoration: none; }
-        .whatsapp-float:hover { transform: scale(1.15) rotate(10deg); }
-
-        /* التذييل الفاخر */
-        footer { background: var(--dark-choco); color: var(--cream); text-align: center; padding: 40px 20px; margin-top: 100px; border-top: 3px solid var(--gold); }
-        footer p { font-size: 14px; letter-spacing: 1px; opacity: 0.85; }
-
-        @media (max-width: 900px) {
-            header { padding: 15px 20px; }
-            .about-grid { grid-template-columns: 1fr; gap: 30px; padding: 30px; }
-            .form-grid { grid-template-columns: 1fr; }
-            .form-group.full { grid-column: span 1; }
-            .hero h1 { font-size: 34px; }
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>titrit cake | كيك مخصّص في الرباط وسلا</title>
+<meta name="description" content="titrit cake: كيك مخصّص وحلويات فاخرة ومناسبات خاصة وفود تراك في الرباط وسلا.">
+<meta property="og:title" content="titrit cake">
+<meta property="og:description" content="More than Cake… It's a Feeling">
+<meta property="og:image" content="images/hero-cake.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎂%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;700&family=Cormorant+Garamond:wght@600&family=Allura&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="top"><div class="wrap">
+<header>
+  <a class="logo" href="#top">TITRIT CAKE</a>
+  <nav><a href="#designs">التصاميم</a><a href="#how">كيف تطلبين</a><a href="#order">اطلبي الآن</a></nav>
+</header>
 
-    <!-- زر الواتساب العائم -->
-    <a href="https://wa.me/212617598717?text=Bonjour,%20je%20souhaite%20commander%20une%20création%20sur%20mesure%20chez%20Titrit%20Cake" target="_blank" class="whatsapp-float">💬</a>
+<main id="top">
+<div class="hero">
+  <div>
+    <img class="em" alt="شعار titrit cake" src="images/logo.jpg"><p class="script">More than Cake… It's a Feeling</p>
+    <h1>أكثر من كيك… إحساس</h1>
+    <p>كيك مخصّص وحلويات فاخرة لمناسباتك في الرباط وسلا. تحكين لنا الفكرة ونحوّلها إلى كيكة تُرى وتُؤكل.</p>
+    <a class="btn" href="#order">اطلبي تصميمك</a>
+    <a class="btn alt" href="#designs">شاهدي التصاميم</a>
+  </div>
+  <div class="arch"><img src="images/hero-cake.jpg" alt="كيكة شوكولاتة بالفراولة من titrit cake"></div>
+</div>
+</main>
+</div></div>
 
-    <!-- رأس الصفحة العصري -->
-    <header>
-        <div class="logo-area">
-            <div class="logo-text">TITRIT CAKE</div>
-            <div class="sub-logo-text">Salé, Morocco</div>
-        </div>
-        <a href="https://www.instagram.com/titritcake/" target="_blank" class="btn-gold">Instagram @titritcake</a>
-    </header>
+<section id="services"><div class="wrap">
+  <h2>خدماتنا</h2>
+  <p class="sub">من كيكة العيد إلى طاولة الحفل كاملة، في الرباط وسلا.</p>
+  <div class="svcs"><div class="svc"><b>كيك مخصّص</b><span>Gâteaux personnalisés</span></div><div class="svc"><b>حلويات فاخرة</b><span>Desserts gourmands</span></div><div class="svc"><b>مناسبات خاصة</b><span>Événements spéciaux</span></div><div class="svc"><b>فود تراك</b><span>Food truck Rabat &amp; Salé</span></div></div>
+</div></section>
 
-    <!-- القسم الرئيسي الفاخر -->
-    <section class="hero">
-        <div class="hero-script">More than Cake... It's a Feeling</div>
-        <h1>فن تصميم الحلويات الفاخرة وحسب الطلب ✨</h1>
-        <p>نصنع لأجلكم تحفاً فنية تنبض بالجمال والمذاق الراقي لتخليد أجمل لحظاتكم في مدينة سلا.</p>
-        <a href="#booking" class="btn-gold" style="padding: 14px 40px; font-size: 16px;">احجز كيكة أحلامك الآن</a>
-    </section>
+<section class="band" id="designs"><div class="wrap">
+  <h2>تصاميمنا</h2>
+  <p class="sub">صور حقيقية من أعمالنا. كل تصميم يُعدَّل حسب ذوقك ومناسبتك.</p>
+  <div class="filters" id="filters" role="group" aria-label="تصفية التصاميم"></div>
+  <div class="grid" id="grid"></div>
+</div></section>
 
-    <div class="container">
-        
-        <!-- قسم من نحن -->
-        <div class="about-grid">
-            <div class="about-content">
-                <h2>L'Esprit Titrit Cake</h2>
-                <p>في <strong>Titrit Cake</strong>، نؤمن بأن كل مناسبة فريدة تستحق تصميماً استثنائياً يروي قصتكم. نحن ندمج بين أصول المعجنات الراقية (Pâtisserie fine) ولمسة أنثوية ساحرة تلهم الحواس.</p>
-                <p>نختار بعناية فائقة أجود المكونات الطبيعية لنضمن لكم توازناً مثالياً يجمع بين روعة الشكل ومذاق المترَف الذي يليق باحتفالاتكم العائلية والخاصة.</p>
-            </div>
-            <div class="about-image">
-                <img src="WhatsApp Image 2026-10-02 at 01.34.34 (1).jpeg" alt="Titrit Cake Creation">
-            </div>
-        </div>
+<section id="how"><div class="wrap">
+  <h2>كيف تطلبين</h2>
+  <p class="sub">ثلاث خطوات واضحة من الفكرة إلى الاستلام.</p>
+  <ol class="steps">
+    <li><b>أرسلي فكرتك</b>صورة، ألوان، أو وصف بسيط للمناسبة.</li>
+    <li><b>نرسل لك التصميم والسعر</b>نؤكد النكهة والحجم وموعد التسليم.</li>
+    <li><b>تستلمين كيكتك</b>مغلّفة وجاهزة للمناسبة.</li>
+  </ol>
+</div></section>
 
-        <!-- معرض الأعمال الجديد كلياً -->
-        <div style="margin-top: 100px;">
-            <h2 class="section-title">Notre Galerie de Créations</h2>
-            <div class="section-subtitle">إبداعات مصممة خصيصاً لأجلكم</div>
-            
-            <div class="gallery-grid">
-                <div class="gallery-card">
-                    <div class="gallery-img-container">
-                        <img src="WhatsApp Image 2026-10-02 at 01.34.34 (1).jpeg" alt="Design Féminin & Papillons">
-                    </div>
-                    <div class="gallery-details">
-                        <h3>Design Féminin & Papillons</h3>
-                        <p>كيكة عيد ميلاد أنيقة مزينة بالورود والفراشات حسب الطلب لتجسيد رقة المناسبة.</p>
-                    </div>
-                </div>
+<section class="band" id="order"><div class="wrap">
+  <h2>اطلبي كيكتك</h2>
+  <p class="sub">املئي التفاصيل وسيفتح طلبك كرسالة جاهزة على واتساب.</p>
+  <form id="f">
+    <div><label for="t">نوع التصميم</label><select id="t"></select></div>
+    <div><label for="d">تاريخ المناسبة</label><input id="d" type="date"></div>
+    <div><label for="n">تفاصيل إضافية</label><textarea id="n" rows="4" placeholder="الألوان، الاسم المكتوب، عدد الأشخاص…"></textarea></div>
+    <div class="acts"><button class="btn" type="submit">أرسلي الطلب على واتساب</button><button class="btn alt2" type="button" id="ig">أو عبر إنستغرام</button></div>
+  </form>
+</div></section>
 
-                <div class="gallery-card">
-                    <div class="gallery-img-container">
-                        <img src="WhatsApp Image 2026-10-02 at 01.34.34 (2).jpeg" alt="Thème Super-Héros">
-                    </div>
-                    <div class="gallery-details">
-                        <h3>Thème Super-Héros (Spider-Man)</h3>
-                        <p>تصميم مخصص وممتع مليء بالحيوية لإسعاد أعياد ميلاد الأطفال بطريقة مبهرة.</p>
-                    </div>
-                </div>
-
-                <div class="gallery-card">
-                    <div class="gallery-img-container">
-                        <img src="WhatsApp Image 2026-10-02 at 01.34.34 (3).jpeg" alt="Passion Foot & Barça">
-                    </div>
-                    <div class="gallery-details">
-                        <h3>Passion Foot & Barça (Messi)</h3>
-                        <p>تحفة مخصصة لعشاق النادي الكتالوني والنجم ميسي بتفاصيل دقيقة ومتقنة.</p>
-                    </div>
-                </div>
-
-                <div class="gallery-card">
-                    <div class="gallery-img-container">
-                        <img src="WhatsApp Image 2026-10-02 at 01.34.34.jpeg" alt="Thème Batman">
-                    </div>
-                    <div class="gallery-details">
-                        <h3>Thème Batman</h3>
-                        <p>إبداع استثنائي لعشاق الأبطال الخارقين بلمسة فخمة تناسب أجواء الاحتفالات.</p>
-                    </div>
-                </div>
-
-                <div class="gallery-card">
-                    <div class="gallery-img-container">
-                        <img src="WhatsApp Image 2026-10-02 at 01.34.35.jpeg" alt="Moments de Fête">
-                    </div>
-                    <div class="gallery-details">
-                        <h3>Moments de Fête & Pique-nique</h3>
-                        <p>تجهيزات وحلويات متكاملة تضفي بهجة وأناقة على طاولات الاستقبال والاحتفالات.</p>
-                    </div>
-                </div>
-
-                <div class="gallery-card">
-                    <div class="gallery-img-container">
-                        <img src="WhatsApp Image 2026-10-02 at 01.34.36 (1).jpeg" alt="Couronne Royale">
-                    </div>
-                    <div class="gallery-details">
-                        <h3>Couronne Royale (Umnia)</h3>
-                        <p>فخامة اللمسات الملكية والذهبية للمناسبات الخاصة والراقية جداً.</p>
-                    </div>
-                </div>
-
-                <div class="gallery-card">
-                    <div class="gallery-img-container">
-                        <img src="WhatsApp Image 2026-10-02 at 01.34.36 (2).jpeg" alt="Élégance Rose">
-                    </div>
-                    <div class="gallery-details">
-                        <h3>Élégance Rose & Couronne</h3>
-                        <p>تصميم رقيق وساحر بألوان أنثوية مفعمة بالفخامة والذوق الرفيع.</p>
-                    </div>
-                </div>
-
-                <div class="gallery-card">
-                    <div class="gallery-img-container">
-                        <img src="WhatsApp Image 2026-10-02 at 01.34.36 (3).jpeg" alt="Roses d'Exception">
-                    </div>
-                    <div class="gallery-details">
-                        <h3>Roses d'Exception & Amour</h3>
-                        <p>تنسيق فاخر للورود الحمراء مصمم خصيصاً لمناسبات الحب والخطوبة والاحتفالات الرومانسية.</p>
-                    </div>
-                </div>
-
-                <div class="gallery-card">
-                    <div class="gallery-img-container">
-                        <img src="WhatsApp Image 2026-10-02 at 01.34.36 (4).jpeg" alt="Célébration de Réussite">
-                    </div>
-                    <div class="gallery-details">
-                        <h3>Célébration de Réussite (Bac)</h3>
-                        <p>تهاني التميز والنجاح بأرقى تصاميم الحلويات الاحتفالية التي تخلد الإنجازات.</p>
-                    </div>
-                </div>
-
-                <div class="gallery-card">
-                    <div class="gallery-img-container">
-                        <img src="WhatsApp Image 2026-10-02 at 01.34.36 (5).jpeg" alt="Moments Précieux">
-                    </div>
-                    <div class="gallery-details">
-                        <h3>Moments Précieux & Douceur</h3>
-                        <p>تعبير صادق عن المشاعر الدافئة في أبسط وأرقى تفاصيل الحلويات المنزلية الفاخرة.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- قسم الحجز الفاخر والمطور -->
-        <div id="booking" style="margin-top: 100px;">
-            <div class="booking-section">
-                <h2 class="section-title" style="margin-bottom: 5px;">Réservation & Commande</h2>
-                <p style="text-align: center; color: #777; margin-bottom: 40px; font-size: 15px;">شاركنا رؤيتك لكي نصمم لك كيكة أحلامك بكل دقة واحترافية</p>
-                
-                <form>
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="name">الاسم الكامل / Nom Complet</label>
-                            <input type="text" id="name" placeholder="أدخل اسمك الكريم" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">رقم الهاتف / Téléphone WhatsApp</label>
-                            <input type="tel" id="phone" placeholder="Ex: +212 6..." required>
-                        </div>
-                        <div class="form-group full">
-                            <label for="occasion">نوع المناسبة / Type d'Événement</label>
-                            <select id="occasion">
-                                <option value="birthday">عيد ميلاد / Anniversaire</option>
-                                <option value="wedding">زفاف أو خطوبة / Mariage & Fiançailles</option>
-                                <option value="reception">حفلة استقبال أو تخرج / Réception & Graduation</option>
-                                <option value="other">أخرى / Autre</option>
-                            </select>
-                        </div>
-                        <div class="form-group full">
-                            <label for="details">تفاصيل الطلب (التصميم، النكهة، التاريخ...) / Détails</label>
-                            <textarea id="details" placeholder="أخبرنا عن أفكارك، النكهات المفضلة، أو تفاصيل التصميم المطلوب..."></textarea>
-                        </div>
-                    </div>
-                    <div style="text-align: center; margin-top: 20px;">
-                        <button type="submit" class="btn-gold" style="width: 100%; padding: 16px; font-size: 16px; border: none; cursor: pointer;">إرسال الطلب / Envoyer la commande</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- التذييل -->
-    <footer>
-        <p>&copy; 2026 Titrit Cake. More than Cake... It's a Feeling. Tous droits réservés.</p>
-    </footer>
-
+<footer>
+  <div class="logo">TITRIT CAKE</div>
+  <p>Sweet Moments, Happy People<br>الرباط وسلا، المغرب</p>
+  <p class="flinks">
+    <a href="https://wa.me/212617598717" target="_blank" rel="noopener">واتساب</a>
+    <a href="tel:+212617598717" dir="ltr">+212 617 598 717</a>
+    <a href="https://www.instagram.com/titritcake/" target="_blank" rel="noopener">إنستغرام</a>
+    <a href="https://www.facebook.com/share/1Bw9NB3ghh/?mibextid=wwXIfr" target="_blank" rel="noopener">فيسبوك</a>
+  </p>
+</footer>
+<a class="wa" href="https://wa.me/212617598717" target="_blank" rel="noopener">واتساب</a>
+<script src="script.js"></script>
 </body>
 </html>
