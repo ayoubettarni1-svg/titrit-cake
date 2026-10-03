@@ -6,52 +6,52 @@ const D = [
  {
   "n": "كيكة برشلونة",
   "c": "أعياد ميلاد",
-  "s": "images/cake-01.jpg"
+  "s": "cake-01.jpg"
  },
  {
   "n": "التاج الوردي",
   "c": "أعياد ميلاد",
-  "s": "images/cake-02.jpg"
+  "s": "cake-02.jpg"
  },
  {
   "n": "باتمان",
   "c": "أعياد ميلاد",
-  "s": "images/cake-03.jpg"
+  "s": "cake-03.jpg"
  },
  {
   "n": "سبايدرمان",
   "c": "أعياد ميلاد",
-  "s": "images/cake-04.jpg"
+  "s": "cake-04.jpg"
  },
  {
   "n": "التاج الذهبي",
   "c": "أعياد ميلاد",
-  "s": "images/cake-05.jpg"
+  "s": "cake-05.jpg"
  },
  {
   "n": "طبقتان بالأخضر",
   "c": "مناسبات",
-  "s": "images/cake-06.jpg"
+  "s": "cake-06.jpg"
  },
  {
   "n": "كيكتا العمرة",
   "c": "العمرة",
-  "s": "images/cake-07.jpg"
+  "s": "cake-07.jpg"
  },
  {
   "n": "نزهة على الشاطئ",
   "c": "مناسبات",
-  "s": "images/cake-08.jpg"
+  "s": "cake-08.jpg"
  },
  {
   "n": "عمرة مقبولة",
   "c": "العمرة",
-  "s": "images/cake-09.jpg"
+  "s": "cake-09.jpg"
  },
  {
   "n": "قلب لماما",
   "c": "أعياد ميلاد",
-  "s": "images/cake-10.jpg"
+  "s": "cake-10.jpg"
  }
 ];
 
